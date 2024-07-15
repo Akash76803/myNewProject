@@ -1,0 +1,54 @@
+<template>
+	<form>
+		<div style="background-color:White;">
+           
+            <lightning-input  type="text" label="Put Name."
+								placeholder={input} ></lightning-input>
+            	
+         
+			<lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+				<lightning-button-icon icon-name="utility:down" variant="border-filled" alternative-text="Show More"
+					slot="actions"></lightning-button-icon>
+				<lightning-layout multiple-rows>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="3">
+						<div class="custom-box">
+							<lightning-input type="Phone" variant="standard" name="Phone" label="Phone No."
+								placeholder="type here..." ></lightning-input>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="3">
+						<div class="custom-box">
+							<lightning-input type="text" variant="standard" name="FirstName" label="First Name"
+								placeholder="type here..." onchange={handleChangeInput} ></lightning-input>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="3">
+						<div class="custom-box">
+							<lightning-input type="text" variant="standard" name="LastName" label="Last Name"
+								placeholder="type here..."></lightning-input>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="3">
+						<div class="custom-box">
+							<lightning-input type="Email" variant="standard" name="Email" label="Email"
+								placeholder="type here..."></lightning-input>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+			</lightning-card><br/>
+            <div>
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+                        <div class="custom-box"><lightning-button variant="brand" label="Change"  onclick={handleClick}></lightning-button></div>
+                    </lightning-layout-item>
+                   
+                </lightning-layout>
+            </div>
+		</div>
+	</form>
+
+</template>

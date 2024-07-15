@@ -1,0 +1,37 @@
+<template>
+
+<div class="slds-grid slds-gutters">
+<div class="slds-col">
+<span>
+            <lightning-card title="Account 
+                                    Records">
+                <template for:each={accounts.data} for:item="actObj" for:index="index">
+                    <p key={actObj.Id} class="slds-p-horizontal_small">
+                        <a href="#" onclick={handleClick} data-accountid={actObj.Id}>{actObj.Name}</a>
+                    </p>
+                </template>
+            </lightning-card>
+</span>
+</div>
+
+<div class="slds-col">
+<span>
+<lightning-layout multiple-rows>
+     <lightning-layout-item padding="around-small" size="10">
+            <c-account-detail-page record-id={accountidfrmparent}></c-account-detail-page> 
+        </lightning-layout-item>
+</lightning-layout>
+</span>
+</div>
+
+<div class="slds-col">
+<span>
+<lightning-layout multiple-rows>
+     <lightning-layout-item padding="around-small" size="10">
+            <c-contact-records-list account-id={accountidfrmparent}></c-contact-records-list> 
+        </lightning-layout-item>
+</lightning-layout>
+</span>
+</div>
+</div>
+</template>

@@ -1,0 +1,22 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="General Information" helpTitle="More Detail" helpUrl="www.google.com">
+            <apex:pageBlockSection title="Basic Information" >
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Registation Information" >
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="Contact Information" helpTitle="Contact Detail" helpUrl="www.google.com">
+            <apex:pageBlockSection title="Contact Information" >
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Address Information" >
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="Top">
+                <apex:commandButton action="{!New}" value="New"/>
+                <apex:commandButton action="{!Save}" value="Save"/>
+                <apex:commandButton action="{!Delete}" value="Delete"/>
+            </apex:pageBlockButtons>
+            <apex:inputText title="Name"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

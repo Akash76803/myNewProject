@@ -1,0 +1,22 @@
+<apex:page standardController="Opportunity" >
+    <style>
+        .newLink{
+        text-align:center !important;
+        color:green !important; 
+        font-weight:bold !important;
+        }
+    </style>
+        <apex:pageBlock title="Opportunity"  >
+           <apex:pageBlockSection title="Opportunity Infomation">
+                <apex:outputField label="Name" value="{!Opportunity.Name}"/>
+                <apex:outputField value="{!Opportunity.CloseDate}"/>
+                <apex:outputField value="{!Opportunity.AccountId}"/>
+            
+                   <apex:outputLink value="https://www.google.com" styleClass="newLink">www.google.com</apex:outputLink>
+             
+                   
+            </apex:pageBlockSection>  
+    </apex:pageBlock>
+
+    
+</apex:page>

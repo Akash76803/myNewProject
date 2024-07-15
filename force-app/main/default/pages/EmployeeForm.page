@@ -1,0 +1,49 @@
+<apex:page standardController="Opportunity">
+    <apex:form >
+        <apex:pageBlock title="Company">
+            <apex:pageBlockSection title="Employee Personal Detail">
+                <apex:outputLabel value="First Name: ">
+                    <apex:inputText />
+                </apex:outputLabel>
+                <apex:outputLabel value="Last Name: ">
+                    <apex:inputText />
+                </apex:outputLabel>
+                <apex:outputLabel value="Address: ">
+                    <apex:inputTextarea />
+                </apex:outputLabel>
+                <apex:outputLabel value="Phone Number: ">
+                    <apex:inputText />
+                </apex:outputLabel>
+                <apex:outputLabel value="Employee ID: " >
+                    <apex:inputText />
+                </apex:outputLabel>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection Title="Employee Laptop Detail">
+                <apex:outputLabel value="Login/User Name: " >
+                    <apex:inputText />
+                </apex:outputLabel>
+                <apex:outputLabel value="Laptop Password: " >
+                    <apex:inputSecret />
+                </apex:outputLabel>
+                <apex:outputLabel value="Still Active in company: " >
+                    <apex:inputCheckbox />
+                </apex:outputLabel>
+                <apex:outputLabel >
+                    <apex:inputFile value="Upload"></apex:inputFile>
+                </apex:outputLabel>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Opportunity Infomation">
+                <apex:outputField label="Name" value="{!Opportunity.Name}"/>
+                 <apex:outputField value="{!Opportunity.CloseDate}"/>
+                 
+            
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons location="Bottom" >
+                <apex:commandButton action="{!Save}" value="Save"  />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

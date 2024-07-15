@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="OLI Records">
+        <lightning-datatable if:true={opportunitylineitem.data}
+            key-field="id"
+            data={opportunitylineitem.data}
+            columns={columns}>
+        </lightning-datatable>
+    </lightning-card>    
+</template>

@@ -1,0 +1,115 @@
+<template>
+	<form>
+
+		<div>
+
+			<div class="spinner">
+
+				<template if:true={isLoading}>
+
+					<lightning-spinner alternative-text="Loading" variant="brand" size="large">
+
+					</lightning-spinner>
+
+				</template>
+
+			</div>
+
+			<div class="c-container">
+				<lightning-card>
+					<h3 slot="title">
+						<lightning-icon icon-name="standard:account" size="small"></lightning-icon>
+						Multi-Select Lookup Component
+					</h3>
+					<p class="slds-p-horizontal_small">
+						<c-lwc-multi-select-lookup label-name="Search Account" object-api-name="Account"
+							field-api-names="Id,Name" filter-field-api-name="Name" icon-name="standard:account"
+							onretrieve={selectItemEventHandler} onremove={deleteItemEventHandler}>
+						</c-lwc-multi-select-lookup>
+					</p><br><br>
+					<template if:true={isItemExists}>
+						<h3 class="slds-p-horizontal_small">
+							Message from Parent Component <br/>
+                    You have chosen: {selectedItemsToDisplay}
+                </h3>
+
+					</template>
+				</lightning-card>
+			</div>
+
+			<lightning-layout multiple-rows style="display:flex;  justify-content: center; align-items: center; ">
+
+				<lightning-layout-item size="3" padding="around-small" small-device-size="3" medium-device-size="6"
+					large-device-size="3">
+					<c-customlookuplwc icon-name="standard:account" s-object-api-name="Account" label="Account"
+						onlookupupdate={lookupRecord} default-record-id='' placeholder="type here...">
+					</c-customlookuplwc>
+				</lightning-layout-item>
+
+				<lightning-layout-item size="3" padding="around-small" small-device-size="3" medium-device-size="6"
+					large-device-size="3">
+
+					<lightning-input onchange={handleChange} type="text" variant="standard" name="FirstName"
+						label="First Name" placeholder="type here..."></lightning-input>
+
+				</lightning-layout-item>
+
+				<lightning-layout-item size="3" padding="around-small" small-device-size="3" medium-device-size="6"
+					large-device-size="3">
+
+					<lightning-input onchange={handleChange} type="text" variant="standard" name="LastName"
+						label="Last Name" placeholder="type here..."></lightning-input>
+
+				</lightning-layout-item>
+
+				<lightning-layout-item size="3" padding="around-small" small-device-size="3" medium-device-size="6"
+					large-device-size="3">
+
+					<lightning-input onchange={handleChange} maxlength="10" pattern="[6-9]{1}[0-9]{9}" required
+						type="text" variant="standard" name="Phone" label="Phone" placeholder="type here...">
+					</lightning-input>
+
+				</lightning-layout-item>
+
+				<lightning-layout-item size="3" padding="around-small" small-device-size="3" medium-device-size="6"
+					large-device-size="3">
+
+					<lightning-input onchange={handleChange} type="text" variant="standard" name="Email" label="Email"
+						placeholder="type here..."></lightning-input>
+
+				</lightning-layout-item>
+			</lightning-layout>
+
+				<div class="slds-var-p-around_medium">
+        <div class="slds-grid slds-gutters slds-var-p-bottom_medium">
+            <div class="slds-col">
+                <lightning-input type="text" label="Search Picklist Available values"
+                    onchange={handleAvailableSearch}></lightning-input>
+            </div>
+            <div class="slds-col">
+                <lightning-input type="text" label="Search Picklist Selected values"
+                    onchange={handleSelectedSearch}></lightning-input>
+            </div>
+        </div>
+        <lightning-dual-listbox name="languageOptions" label="Select Languages" source-label="Available"
+            selected-label="Selected" field-level-help="Select your preferred languages" options={SelectLang}
+            onchange={handleChange} value={selected}>
+        </lightning-dual-listbox>
+    </div>
+
+		</div>
+	</form>
+	<div style="display:flex;  justify-content: center; align-items: center; ">
+		<div>
+			<lightning-button type="reset" variant="Brand" label="Cancel" title="Cancel" onclick={handlecancel}>
+			</lightning-button>
+		</div> &nbsp;&nbsp;
+		<div>
+			<lightning-button type="reset" variant="brand" label="Save" title="Save" onclick={handleclick}>
+			</lightning-button>
+		</div>
+
+
+
+	</div>
+</template>

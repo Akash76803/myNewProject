@@ -1,0 +1,25 @@
+<template>
+<div>
+       <div>
+					 Message = {message}
+				</div>
+				 <div>
+					 Record Id = {recordId}  
+				</div>
+				<div>Name: {name}</div>
+        <div>Company: {company}</div>
+        <div>Designation: {designation}</div>
+      
+    </div>
+		<div classc= "slds-grid">
+				<div class = "slds-col slds-size_1-of-2">
+						<lightning-formatted-text value ={name} class = "slds-text-heading-large">
+						</lightning-formatted-text>
+				</div>
+				<div class = "slds-col slds-size_2-of-2">
+						<lightning-formatted-text value ={phone} class = "slds-text-heading-large">
+						</lightning-formatted-text>
+				</div>
+				
+		</div>
+</template>

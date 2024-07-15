@@ -1,0 +1,114 @@
+<template>
+	<!-- *************************************HEADER************************************ -->
+	<div class="slds-modal__header">
+		<h1 slot="footer" id="modal-heading-01" class="slds-modal__title slds-hyphenate"
+			style="font-weight: 450;font-size: 1.10rem;">New Task</h1>
+	</div>
+
+	<!-- vertical-align="center" class="x-large" / flexibility="auto" padding="around-small"-->
+	<!-- *************************************BODY************************************ -->
+	<div class="slds-modal__content">
+		<lightning-layout multiple-rows>
+			<lightning-layout-item size="6" padding="around-small">
+				<!--************************************ GETTING PICKLIST VALUE************************************ -->
+				<div class="custom-box">
+					<lightning-combobox name="Subject" label="Subject" options={picklistValues} onchange={handleChange}
+						value={selectedValue}></lightning-combobox>
+				</div>
+				<div class="custom-box">
+					<lightning-combobox name="Status" label="Status" options={StatuspicklistValues}
+						onchange={handleChange} value={selectedValue}></lightning-combobox>
+				</div>
+			</lightning-layout-item>
+
+			<lightning-layout-item size="6" padding="slds-p-around_xx-small">
+				<div class="custom-box">
+					<lightning-combobox name="Priority" label="Priority" options={PrioritypicklistValues}
+						onchange={handleChange} value={selectedValue}></lightning-combobox>
+				</div>
+				<!-- ****************************Date i/p here********************* -->
+				<div class="custom-box">
+					<lightning-input onchange={handleDateChange} type="date" variant="standard" name="ActivityDate"
+						label="Due Date" placeholder="type here..."></lightning-input>
+				</div>
+			</lightning-layout-item>
+			<!-- ****************************Lookup i/p start here********************* -->
+			<lightning-layout-item size="6" padding="around-small">
+				<div class="custom-box">
+					<c-customlookuplwc icon-name="standard:contact" s-object-api-name="Account" label="Account Name"
+						onlookupupdate={lookupRecord} default-record-id=''>
+					</c-customlookuplwc>
+				</div>
+				<div class="custom-box">
+					<c-customlookuplwc icon-name="standard:user" s-object-api-name="User" label="AssignTo"
+						onlookupupdate={lookupUserRecord} default-record-id=''>
+					</c-customlookuplwc>
+				</div><br/>
+				
+			</lightning-layout-item>
+
+			<lightning-layout-item size="6" padding="around-small">
+					<!--*****************************************Multiselect Lookup******************************* -->
+				<div class="slds-p-horizontal_small">
+					<c-reusable-multi-select-lookup objectname="Contact" accountidfromchild={accountIds}
+						fieldnames=" Id, Name, Email, AccountId" onselected={handleselectedContactRecord}
+						icon-name="standard:contact">
+					</c-reusable-multi-select-lookup>
+				</div>
+
+				<div class="custom-box">
+					<c-global-pick-list-l-w-c onchildmethod={callFromChild} object-api-name="Account"
+						object-record-type-id='0122w000001S1BZ' controller-field-api-name='Industry'
+						controller-field-label='Industry' dependent-field-api-name='CustomerPriority__c'
+						dependent-field-label='Customer Priority'>
+					</c-global-pick-list-l-w-c>
+				</div>
+				
+				
+				
+			</lightning-layout-item>
+
+			
+			
+		</lightning-layout>
+	</div>
+	<!--******************************** Multiselect Picklist****************** -->
+	<div class="c-container">
+		<lightning-layout vertical-align="center" class="x-large">
+			<lightning-layout-item flexibility="auto" padding="around-small">
+				<div class="custom-box">
+					<div class="slds-var-p-around_medium">
+						<div class="slds-grid slds-gutters slds-var-p-bottom_medium">
+							<div class="slds-col">
+								<lightning-input type="text" label="Search Picklist Available values"
+									onchange={handleAvailableSearch}>
+								</lightning-input>
+							</div>
+							<div class="slds-col">
+								<lightning-input type="text" label="Search Picklist Selected values"
+									onchange={handleSelectedSearch}>
+								</lightning-input>
+							</div>
+						</div>
+						<lightning-dual-listbox name="Select_Language__c" label="Select Languages"
+							source-label="Available" selected-label="Selected"
+							field-level-help="Select your preferred languages" options={options}
+							onchange={handleChangeMulti} value={selected}>
+						</lightning-dual-listbox>
+					</div>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+	<!-- ******************FOOTER************************************ -->
+	<div class="slds-modal__footer">
+		<div slot="footer" style="display: flex;
+											  justify-content: center;">
+			<lightning-button label="Cancel" title="Cancel" onclick={hideModalBox}></lightning-button>&nbsp;&nbsp;&nbsp;
+			<lightning-button variant="brand" label="Save" title="Save" onclick={Onsave}></lightning-button>
+		</div>
+	</div>
+
+
+
+</template>

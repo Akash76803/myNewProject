@@ -1,0 +1,289 @@
+<apex:page showHeader="false" standardStylesheets="false" lightningStylesheets="false" >
+    <html>
+        <head>
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+            <!--  If necessary, please modify the charset parameter to specify the        -->
+            <!--  character set of your HTML page.                                        -->
+            <!--  ----------------------------------------------------------------------  --
+<head>
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: Please add the following <FORM> element to your page.             -->
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+            <!--  these lines if you wish to test in debug mode.                          -->
+            <!--  <input type="hidden" name="debug" value=1>                              -->
+            <!--  <input type="hidden" name="debugEmail" value="jyoti@plus91labs.com">    -->
+            <!--  ----------------------------------------------------------------------  -->
+            
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,600&display=swap"
+                  rel="stylesheet"/>
+            <style id="jsbin-css">
+                *,
+                html {
+                padding: 0px;
+                margin: 0px;
+                font-family: sans-serif;
+                }
+                input[type="text"] {
+                padding-left: 5px;  
+                }
+                #lead {
+                display: none;
+                }
+                a {
+                color: #fff;
+                padding: 15px;
+                text-decoration: none;
+                }
+                
+                .nav-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                }
+                
+                ul#nav-mobile {
+                display: flex;
+                }
+                
+                nav {
+                background-color: #f3f3f3;
+                margin: 0px;
+                padding: 0px;
+                
+                }
+                
+                .container {
+                display: flex;
+                }
+                
+                .wrapper {
+                background: url("https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
+                background-size: cover;
+                background-position: center center; 
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                overflow-y: hidden;
+                }
+                
+                .appContainer {
+                //background: rgba(255, 255, 255, 0.7);
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                }
+                
+                
+                .form {
+                margin-top: 8em;
+                background: rgb(155 155 157 / 35%);
+                color: white;
+                font-weight: 600;
+                padding: 20px;
+                border-radius: 5px;
+                height: 260px;
+                }
+                
+                .form>form {
+                display: flex;
+                flex-direction: column;
+                
+                }
+                
+                .control {
+                padding: 5px;
+                min-width: 30%;
+                display: flex;
+                
+                
+                }
+                
+                label {
+                width: 150px;
+                }
+                
+                
+                label::before {
+                content: "*";
+                padding-right: 5px;
+                color: #f00;
+                
+                }
+                
+                .black li a {
+                color: black;
+                }
+                
+                .black {
+                list-style: none;
+                }
+                
+                input[type=submit] {
+                    height: 35px;
+                    width: 100%;
+                    border: none;
+                    padding: 4px;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    background-color: #000;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                }
+                
+               .brand-logo>img {
+                width: 130px;
+                height: 87px;
+                margin-top: 20px;
+                }
+                
+                @media only screen and (max-width: 600px) {
+                ul#nav-mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                }
+                
+                
+                .nav-wrapper {
+                display: flex;
+                flex-direction: column;
+                }
+                
+                
+                .black li a {
+                display: block;
+                padding: 7px;
+                font-weight: bold
+                }
+                
+                .control {
+                width: 80vw;
+                margin-top: 5px;
+                flex-direction: column
+                }
+                
+                input,
+                select,
+                textarea,
+                button,
+                input[type=submit] {
+                outline: none;
+                border: none;
+                padding: 5px;
+                border-radius: 10px;
+                margin-top: 2px;
+                }
+                
+                input[type=submit] {
+                border-radius: 20px;
+                padding: 10px;
+                }
+                
+                label {
+                margin-bottom: 3px;
+                font-weight: bold;
+                font-size: 14px;
+                }
+                
+                
+                label::before {
+                content: "";
+                padding-right: 0px;
+                }
+                
+                }
+            </style>
+        </head>
+        <body class="wrapper">
+           
+                
+                    <a href="#" class="brand-logo">
+                        <img src="https://appexchange.salesforce.com/partners/servlet/servlet.FileDownload?file=00P3A00000lIkqWUAS" />
+                    </a>
+                    
+         
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: Please add the following <FORM> element to your page.             -->
+            <!--  ----------------------------------------------------------------------  -->
+            
+            <div class="appContainer">
+                <div class="form">
+                    <!--  ----------------------------------------------------------------------  -->
+                    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+                    <!--  If necessary, please modify the charset parameter to specify the        -->
+                    <!--  character set of your HTML page.                                        -->
+                    <!--  ----------------------------------------------------------------------  -->
+                    
+                    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"/>
+                    
+                    <!--  ----------------------------------------------------------------------  -->
+                    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+                    <!--  ----------------------------------------------------------------------  -->
+                    
+                    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                        
+                        <input type="hidden" name="oid" value="00D2w00000HHOrB"/>
+                        <input type= "hidden" name="retURL" value="https://minus-30enquiryform-developer-edition.ap16.force.com/Marblecity/ThankYou"/>
+                        
+                        <!--  ----------------------------------------------------------------------  -->
+                        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                        <!--  these lines if you wish to test in debug mode.                          -->
+                        <!--  <input type="hidden" name="debug" value=1>                              -->
+                        <!--  <input type="hidden" name="debugEmail" value="saloni@plus91labs.com">   -->
+                        <!--  ----------------------------------------------------------------------  -->
+                        
+                       
+                        <div class = "control">
+                            <label for="first_name">First Name</label>
+                            <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+                        </div>
+                        
+                        <div class = "control">
+                            <label for="last_name">Last Name</label>
+                            <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+                        </div>
+                        
+                        <div class = "control">
+                            <label for="phone">Phone</label>
+                            <input  id="phone" maxlength="40" name="phone" size="20" type="text" />
+                        </div>
+                        
+                        <div class = "control">
+                            <label for="email">Email</label>
+                            <input  id="email" maxlength="80" name="email" size="20" type="text" />
+                        </div>
+                        
+                        
+                        <div class = "control">
+                            <label for="company">Company</label>
+                            <input  id="company" maxlength="40" name="company" size="20" type="text" />
+                        </div>
+                        
+                        <div class = "control">
+                            <label for="city">City</label>
+                            <input  id="city" maxlength="40" name="city" size="20" type="text" />
+                        </div>
+                        
+                        <div id="lead" class = "control">    
+                            <label for="LeadSource">Lead Source</label>
+                            <input  id="lead" maxlength="80" name="lead_source" size="20" type="text"  value="Website" readonly="true" />
+                        </div>
+                        
+                        
+                        <div class = "control">
+                            <input type="submit" name="submit"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </body>
+    </html>
+</apex:page>

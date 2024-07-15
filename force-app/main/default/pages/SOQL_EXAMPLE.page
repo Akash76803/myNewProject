@@ -1,0 +1,13 @@
+<apex:page controller="SOQL_EXAMPLE">
+    <apex:form >
+    <apex:pageBlock title="Accounts">
+        <apex:pageBlockTable value="{!accounts}" var="a">
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.phone}"/>
+            <apex:column value="{!a.industry}"/>
+            
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

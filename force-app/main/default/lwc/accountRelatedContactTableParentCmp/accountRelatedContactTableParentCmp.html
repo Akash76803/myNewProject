@@ -1,0 +1,22 @@
+<template>
+
+
+	 <div class="custom-box">
+					<c-Account-Related-Contact-Table record-id={accountIds} s-object-api-name="Contact" label="AcContact"
+					    onlookupupdate={lookupContactRecord} options={records} ></c-Account-Related-Contact-Table>
+					
+				</div>
+
+	<div class="custom-box">
+					<c-global-pick-list-l-w-c onchildmethod={callFromChild}
+                                            object-api-name="Account"
+											object-record-type-id = '0122w000001S1BZ'
+                                            controller-field-api-name = 'Industry'
+                                            controller-field-label = 'Industry'
+                                            dependent-field-api-name = 'CustomerPriority__c'
+                                            dependent-field-label = 'Customer Priority'
+                                            >
+                </c-global-pick-list-l-w-c>
+	</div>
+
+</template>

@@ -1,0 +1,14 @@
+<template>
+     <div style="height: 200px; width:200">
+        <lightning-datatable
+                key-field="Id"
+                data={Conlist}
+                show-row-number-column
+                onsave={handlesave}
+                onclick={handleclick}
+                draft-values={draftValues}
+                
+                columns={columns}>
+        </lightning-datatable>
+    </div>
+</template>

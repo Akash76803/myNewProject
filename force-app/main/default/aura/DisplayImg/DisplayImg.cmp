@@ -1,0 +1,17 @@
+<aura:component implements="lightning:availableForFlowScreens,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	 <aura:attribute name= "url" type="string"/>
+    <aura:attribute name= "height" type="string"/>
+    <aura:attribute name= "width" type="string"/>
+    <aura:attribute name= "align" type="string"/>
+    
+     <div
+         class= "{!v.align == 'center' ? 'slds-align_absolute-center' : '' }"
+         style= "{!v.align != 'center' ? 'float : ' + v.align : ''}"
+         >
+    <aura:if isTrue ="{! not(empty(v.url))}">
+        <img src ="{!v.url}" height ="{!v.height}" width="{!v.width}"/>
+        <aura:set attribute ="else"> image url missing</aura:set>
+        </aura:if>
+    </div>
+    <br/><br/>
+</aura:component>

@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="Account Details">
+    <div class="slds-p-around_medium">
+      <template if:true={account}>
+        <p><strong>Name:</strong> {account.Name}</p>
+        <p><strong>Industry:</strong> {account.Industry}</p>
+        <!-- Add more fields as needed -->
+      </template>
+      <template if:false={account}>
+        <p>No account found.</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

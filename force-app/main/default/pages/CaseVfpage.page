@@ -1,0 +1,218 @@
+<apex:page >
+    <head>
+        <img src= "https://plus91labsllp-1b-dev-ed--c.develop.vf.force.com/resource/1674816592000/Logosalesforce?"
+                 alt ="logo" width ="200" align ="left"/>
+        <style type="text/css">
+            
+            .form-style-5{
+            
+            max-width: 500px;
+            
+            padding: 10px 20px;
+            
+            background: #FFA500;
+            
+            margin: 10px auto;
+            
+            padding: 20px;
+            
+            background: #f4f7f8;
+            
+            border-radius: 8px;
+            
+            font-family: Georgia, "Times New Roman", Times, serif;
+            
+            }
+            
+            .form-style-5 fieldset{
+            
+            border: none;
+            
+            }
+            
+            .form-style-5 legend {
+            
+            font-size: 1.4em;
+            
+            margin-bottom: 10px;
+            
+            }
+            
+            .form-style-5 label {
+            
+            display: block;
+            
+            margin-bottom: 8px;
+            
+            }
+            
+            .form-style-5 input[type="text"],
+            
+            .form-style-5 textarea,
+            
+            .form-style-5 select {
+            
+            font-family: Georgia, "Times New Roman", Times, serif;
+            
+            background: rgba(255,255,255,.1);
+            
+            border: none;
+            
+            border-radius: 4px;
+            
+            font-size: 15px;
+            
+            margin: 0;
+            
+            outline: 0;
+            
+            padding: 10px;
+            
+            width: 100%;
+            
+            box-sizing: border-box;
+            
+            -webkit-box-sizing: border-box;
+            
+            -moz-box-sizing: border-box;
+            
+            background-color: #e8eeef;
+            
+            color:#8a97a0;
+            
+            -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            
+            box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            
+            margin-bottom: 30px;
+            
+            }.form-style-5 input[type="text"]:focus,
+            
+            .form-style-5 textarea:focus,
+            
+            .form-style-5 select:focus{
+            
+            background: #d2d9dd;
+            
+            }
+            
+            .form-style-5 select{
+            
+            -webkit-appearance: menulist-button;
+            
+            height:35px;
+            
+            }
+            
+            .form-style-5 .number {
+            
+            background: #FF6347;
+            
+            color: #fff;
+            
+            height: 30px;
+            
+            width: 30px;
+            
+            display: inline-block;
+            
+            font-size: 0.8em;
+            
+            margin-right: 4px;
+            
+            line-height: 30px;
+            
+            text-align: center;
+            
+            text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+            
+            border-radius: 15px 15px 15px 0px;
+            
+            }
+            
+            
+            .form-style-5 input[type="submit"]
+            
+            {
+            
+            position: relative;
+            
+            display: block;
+            
+            padding: 19px 39px 18px 39px;
+            
+            color: #FFF;
+            
+            margin: 0 auto;
+            
+            background: #0f4edb;
+            
+            font-size: 18px;
+            
+            text-align: center;
+            
+            font-style: normal;
+            
+            width: 100%;
+            
+            border: 1px solid #0f4edb;
+            
+            border-width: 1px 1px 3px;
+            
+            margin-bottom: 10px;
+            
+            }
+            
+            .form-style-5 input[type="submit"]:hover,
+            
+            {
+            
+            background: #0f4edb;
+            
+            }
+            
+        </style>
+    </head>
+    <!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+<div class = "form-style-5">
+   
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"/>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+    <input type="hidden" name="orgid" value="00D2w00000HHOrB"/>
+    <input type="hidden" name="retURL" value="https://plus91labsllp-1b-dev-ed.develop.lightning.force.com/lightning/o/Case/list?filterName=00B2w00000LiAxIEAV"/>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail" value="akash@plus91labs.com">    -->
+<!--  ----------------------------------------------------------------------  -->
+
+    <label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br/>
+
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br/>
+
+    <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br/>
+
+    <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br/>
+
+    <label for="description">Description</label><textarea name="description"></textarea><br/>
+
+    <input type="hidden"  id="external" name="external" value="1" /><br/>
+
+    <input type="submit" name="submit"/>
+
+</form>
+    </div>
+
+</apex:page>

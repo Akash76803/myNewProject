@@ -1,0 +1,30 @@
+<aura:component controller ="Calculator" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <!--DEFINE ATTRIBUTE HERE-->
+    <aura:attribute access ="public" name="Num1" type="Integer" />
+    <aura:attribute access ="public" name="Num2" type="Integer" />
+    <aura:attribute access ="public" name="function" type="Integer"/>
+    <aura:attribute access ="public" name="result" type="Integer"/>
+	
+    
+    <!--BIND ATTRIBUTE HERE/ TAKE INPUT-->
+		<div class="row; slds-box" style= "width: 30%; margin-left:10px; margin-top:50px; background-color:White;" >
+            <h2 class="header">Basic Input Number</h2>
+            <lightning:input type="number" name="Num1" label="Enter a First Number" value="{!v.Num1}"/>
+            <lightning:input type="number" name="Num2" label="Enter a Second Number" value="{!v.Num2}"/>
+        </div>
+    <!--Show Output Here-->
+        <div class="row; slds-box" style= "width: 30%; margin-left:10px; margin-top:10px;background-color:White; " >
+            <lightning:input type="number" name="result" label="Result" value="{!v.result}"/>
+        </div>
+
+		<!--Call Action HERE-->    
+        <div class="slds-box" style="padding : 4px; width:30%;margin-left:10px; margin-top:10px; background-color:White;">
+            <div> 
+            <span  style="padding : 4px; margin-left:20px"><lightning:button variant="Brand" label="Add" title="Base action" value="Add" onclick="{! c.handleClick1 }"/></span>&nbsp;
+            <span style="padding : 4px; margin-left:20px"><lightning:button variant="Brand" label="Sub" title="Base action" value="Sub" onclick="{! c.handleClick1 }"/></span>&nbsp;
+            <span  style="padding : 4px; margin-left:20px"><lightning:button variant="Brand" label="Div" title="Base action" value="Div" onclick="{! c.handleClick1 }"/></span>&nbsp;
+            <span  style="padding : 4px; margin-left:20px"><lightning:button variant="Brand" label="Mult" title="Base action" value="Mult" onclick="{! c.handleClick1 }"/></span>
+            </div >
+        </div>
+    
+</aura:component>

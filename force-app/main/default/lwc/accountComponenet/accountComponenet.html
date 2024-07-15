@@ -1,0 +1,24 @@
+<template>
+      <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={ContactList}
+                columns={columns}>
+        </lightning-datatable>
+    </div>
+<div style="text-align: center; text-color: Green">
+  <h1> OPPORTUNITY ACCOUNT CONTACT</h1>
+<div>
+      <lightning-datatable
+        key-field="id"
+        data={opAccConlist}
+        columns={columns}
+        >
+      </lightning-datatable>
+    </div>
+    <div>
+      <lightning-button variant="destuctive" label="Change Value" title="titleName" onclick={handleClick}></lightning-button>
+    </div>
+</div>
+    
+</template>

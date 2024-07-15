@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Accounts" icon-name="standard:account">
+       <lightning-input type="search" variant="Standard" onchange= {handleChange} name="name" label="Search Account" placeholder="type here..."></lightning-input>
+       <lightning-layout vertical-align = "center">
+           <lightning-layout-item padding="around-small" >
+                   <template for:each={accounts} for:item="ac">
+                       <p key = {ac.Id}>{ac.Name}</p>
+                       <p key = {ac.Id}>{ac.phone}</p>
+                        
+                   </template>
+           </lightning-layout-item>
+       </lightning-layout>
+    </lightning-card>
+
+</template>

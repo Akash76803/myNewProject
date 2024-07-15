@@ -1,0 +1,4 @@
+<apex:page lightningStylesheets="true" controller="CreateContactController" >
+  <flow:interview name="Create_Contact_with_account" interview="{!Create_Contact_with_account}" finishLocation="{!CreatedRecord}"> </flow:interview>
+  <apex:param name="Phone" value="7709400101"/>
+</apex:page>

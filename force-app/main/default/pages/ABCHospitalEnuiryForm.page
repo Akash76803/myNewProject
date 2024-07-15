@@ -1,0 +1,20 @@
+<apex:page >
+    <apex:form >
+        
+        <apex:pageBlock title=" ABC HOSPITAL"  helpTitle="More about ABC?" helpUrl="www.google.com" id="para1">
+            <apex:pageBlockSection title="Patient Detail" columns="2" >
+                <apex:outputLabel value=" Patient Name:" style=""><apex:inputText /></apex:outputLabel>
+                <apex:outputLabel value="Patient Address:" style=""><apex:inputTextarea cols="10" rows="3" /></apex:outputLabel>
+                <apex:outputLabel value="Patient Phone:" style=""><apex:inputSecret /></apex:outputLabel>
+                <apex:outputLabel value="Patient Active:" style=""><apex:inputCheckbox /></apex:outputLabel>
+                <apex:outputLabel value="Upload file:" style=""><apex:inputFile value="Upload File"/></apex:outputLabel>
+            </apex:pageBlockSection>
+            
+                <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!Save}"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock> 
+        
+    </apex:form>
+</apex:page>

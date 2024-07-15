@@ -1,0 +1,21 @@
+<apex:page standardController="Opportunity" recordSetVar="opp">
+    <apex:form >
+        <apex:pageBlock title="List of opportunity">
+           <apex:pageBlockTable value="{!Opp}" var="op"> 
+               <apex:column value="{!op.Name}" />
+               <apex:column value="{!op.AccountId}" />
+               <apex:column value="{!op.Amount}" />
+               <apex:column value="{!op.CloseDate}" />
+               <apex:column value="{!op.StageName}" /> 
+               <apex:column value="{!op.Type}" />
+               <apex:inlineEditSupport />
+           </apex:pageBlockTable>
+            
+            <apex:commandButton value="Previous Page" action="{!previous}" />
+            <apex:commandButton value="Next Page" action="{!next}" /><br/>
+            <apex:commandButton value="First Page" action="{!first}" />
+            <apex:commandButton value="Last Page" action="{!last}" />
+            <apex:commandButton value="Save" action="{!save}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

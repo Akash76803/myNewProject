@@ -1,0 +1,22 @@
+<apex:page standardController="Account" recordSetVar="acts" >
+    <apex:form >
+        <apex:pageBlock title="List of Account">
+            <apex:pageBlockTable value="{!acts}" var="Ac">
+                <apex:column value="{!Ac.Name}"/>
+                <apex:column value="{!Ac.Type}"/>
+                <apex:column value="{!Ac.Industry}"/>
+                <apex:column value="{!Ac.Phone}"/> 
+                <apex:column value="{!Ac.Fax}"/>
+                <apex:column headerValue="Annual Revenue">
+                <apex:inputField value="{!Ac.AnnualRevenue}" />
+                </apex:column>
+                <apex:inlineEditSupport disabled="false" />
+            </apex:pageBlockTable>
+            <apex:commandButton value="Previous Page" action="{!previous}" />
+            <apex:commandButton value="Next Page" action="{!next}" /><br/>
+            <apex:commandButton value="First Page" action="{!first}" />
+            <apex:commandButton value="Last Page" action="{!last}" />
+            <apex:commandButton value="Save" action="{!save}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page standardController="Account">
+  <apex:pageBlock >
+  <apex:pageBlockSection title="Account Details" columns="3">
+      <apex:detail relatedList="false"/>
+     <apex:pageBlockSectionItem rendered="false">Item 1</apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >Item 2</apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >Item 3</apex:pageBlockSectionItem>
+  </apex:pageBlockSection>
+  
+   <apex:pageBlockSection title="Opportunity " columns="3">
+      <apex:relatedList list="Opportunities"/>
+        <apex:pageBlockSectionItem >Item 1</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >Item 2</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >Item 3</apex:pageBlockSectionItem>
+  </apex:pageBlockSection>
+  
+    </apex:pageBlock>
+</apex:page>

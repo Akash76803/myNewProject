@@ -1,0 +1,10 @@
+<apex:page controller="SOQL_EXAMPLE">
+	 <apex:pageBlock title="Contact">
+         <apex:pageBlockTable value="{!contacts}" var="c">
+             <apex:column value="{!c.name}"/>
+             <apex:column value="{!c.phone}"/>
+             <apex:column value="{!c.OtherPhone}"/>
+            
+         </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

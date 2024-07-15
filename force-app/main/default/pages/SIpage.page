@@ -1,0 +1,16 @@
+<apex:page controller="SIClass" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputText label="Amount" id="a" value="{!amount}" />
+                <apex:inputText label="Period" id="b" value="{!period}"/>
+                <apex:inputText label="Rate" id="c" value="{!rate}"/>
+                <apex:inputText label="Earning" id="d" value="{!result}"/>
+                
+                
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

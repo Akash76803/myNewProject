@@ -1,0 +1,7 @@
+<apex:page >
+    <apex:outputLink value="https://plus91labsllp-1b-dev-ed--c.develop.vf.force.com/apex/OpportunityPage?" target="_blank"> 
+        VF_output:		
+				<apex:param name="Id" value="0062w00000GrcPTAAZ"/>
+        
+    </apex:outputLink>
+</apex:page>

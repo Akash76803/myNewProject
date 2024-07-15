@@ -1,0 +1,21 @@
+<apex:page >
+<apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:outputLabel value="Amount"></apex:outputLabel>
+               
+                 <apex:outputLabel value="Period"></apex:outputLabel>
+               
+                 <apex:outputLabel value="Rate"></apex:outputLabel>
+               
+                <apex:outputLabel value="Earning"></apex:outputLabel>
+               
+              
+            </apex:pageBlockSection>
+            
+            
+        </apex:pageBlock>
+    </apex:form>
+    
+
+</apex:page>

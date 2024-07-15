@@ -1,0 +1,108 @@
+<template>
+	<!-- SPINNER LOADING -->
+	<div class="spinner">
+				<template if:true={isLoading}>
+					<lightning-spinner alternative-text="Loading" variant="brand" size="large">
+					</lightning-spinner>
+				</template>
+			</div>
+			<!------------------------------------------- TAKING VARIOUS INPUT -------------------------------------------------------------------------- -->
+	<div class="c-container">
+		<lightning-layout vertical-align="center" class="x-large">
+			<lightning-layout-item flexibility="auto" padding="around-small">
+				<div class="custom-box">
+					<lightning-input onchange={handleChange} type="text" variant="standard" name="FirstName" label="First Name"
+						placeholder="type here..."></lightning-input>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small">
+				<div class="custom-box">
+					<lightning-input onchange={handleChange} type="text" variant="standard" name="LastName" label="Last Name"
+						placeholder="type here..." required message-when-value-missing="Please input last name" ></lightning-input>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+	<div class="c-container">
+		<lightning-layout vertical-align="center" class="x-large">
+			<lightning-layout-item flexibility="auto" padding="around-small">
+				<div class="custom-box">
+					<!--******************************************* TAKING ACCOUNT******************************* -->
+						<c-customlookuplwc  icon-name="standard:account" s-object-api-name="Account" label="Account"
+							onlookupupdate={lookupRecord} default-record-id=''   >
+						</c-customlookuplwc>
+					</div>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small">
+				<div class="custom-box">
+					<lightning-input onchange={handleChange} type="Email" variant="standard" name="Email" label="Email"
+						placeholder="type here..." ></lightning-input>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small">
+				<div class="custom-box">
+					<lightning-input onchange={handleChange} type="Phone" variant="standard" name="Phone" label="Mobile No."
+						placeholder="type here..."></lightning-input>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small">
+				<div class="custom-box">
+					<lightning-input onchange= {handleChange} type="date" variant="standard" name="Birthdate " label="Birth Date"
+						placeholder="type here..."></lightning-input>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+	<div class="c-container">
+		<lightning-layout vertical-align="center" class="x-large">
+			<lightning-layout-item flexibility="auto" padding="around-small">
+				<!--*********************************************** GETTING MULTI SELECT PICKLIST VALUE********************************************** -->
+				<div class="custom-box">
+					<div class="slds-var-p-around_medium">
+						<div class="slds-grid slds-gutters slds-var-p-bottom_medium">
+							<div class="slds-col">
+								<lightning-input type="text" label="Search Picklist Available values"
+									onchange={handleAvailableSearch}>
+								</lightning-input>
+							</div>
+							<div class="slds-col">
+								<lightning-input  type="text" label="Search Picklist Selected values"
+									onchange={handleSelectedSearch}>
+								</lightning-input>
+							</div>
+						</div>
+						<lightning-dual-listbox name="Select_Language__c" label="Select Languages" source-label="Available"
+							selected-label="Selected" field-level-help="Select your preferred languages"
+							options={options} onchange={handleChangeMulti} value={selected}>
+						</lightning-dual-listbox>
+					</div>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+		<div class="c-container" >
+			<lightning-layout vertical-align="center" class="x-large">
+				<lightning-layout-item flexibility="auto" padding="around-small">
+					<!--************************************ GETTING PICKLIST VALUE************************************ -->
+					<div class="custom-box">
+						<lightning-combobox name="Preferred_Phone__c" label="Preferred Phone" placeholder="Select an Preferred Phone"
+							options={picklistValues} onchange={handleIndustryChange} value={selectedValue}></lightning-combobox>
+					</div>
+				</lightning-layout-item>
+		<!--********************************************** CHECKBOX INPUT*********************************************************** -->
+				<lightning-layout-item flexibility="auto" padding="around-small">
+					<div class="custom-box">
+						<p style="text-height:12; text-color:black;"> Copy Address </p>
+						<lightning-input onchange={handleCheckboxChange} type="checkbox" variant="standard"
+							name="Copy_Address__c" label="Copy Address" 
+							></lightning-input>
+					</div>
+				</lightning-layout-item>
+			</lightning-layout>
+		</div>
+	<!--********************************************** Save Button*********************************************************** -->
+<div style="display: flex;
+  justify-content: center;">
+    <lightning-button variant="brand" label="Save" onclick={handleClick}></lightning-button>
+</div>
+</template>

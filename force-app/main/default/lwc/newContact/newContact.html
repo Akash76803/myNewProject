@@ -1,0 +1,12 @@
+<template>
+<div>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+            <div class="custom-box"><lightning-input onchange= {handlechange} type="text" variant="standard" name="First Name" label="label" placeholder="type here..."></lightning-input></div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <div class="custom-box"><lightning-input onchange={handlechange} type="text" variant="standard" name="Last Name" label="label" placeholder="type here..."></lightning-input></div>
+        </lightning-layout-item>
+    </lightning-layout>  
+</div>
+</template>

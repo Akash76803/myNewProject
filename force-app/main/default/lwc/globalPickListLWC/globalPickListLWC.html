@@ -1,0 +1,25 @@
+<template>
+	<template if:true={showpicklist}>
+        <lightning-layout multiple-rows>
+           		<lightning-layout-item size="6" flexibility="auto" padding="slds-p-around_xx-small" >
+			<div class="custom-box">
+				<lightning-combobox label={controllerFieldLabel} name={controllerFieldLabel}
+					options={controllingPicklist} value={selectedControlling} onchange={fetchDependentValue}>
+				</lightning-combobox>
+			</div>
+			
+		</lightning-layout-item>
+        <lightning-layout-item size="6" flexibility="auto" padding="slds-p-around_xx-small" >
+			<div class="custom-box">
+				<lightning-combobox label={dependentFieldLabel} name={dependentFieldLabel} options={finalDependentVal}
+					value={selectedControlling} disabled={dependentDisabled} onchange={handleDependentPicklist}>
+				</lightning-combobox>
+			</div>
+		</lightning-layout-item>
+
+        </lightning-layout>
+
+	</template>
+
+
+</template>
